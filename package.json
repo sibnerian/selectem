@@ -4,7 +4,7 @@
   "description": "Shorthand for react-redux’s mapStateToProps. Need some props? Just select 'em!",
   "main": "build/selectem.js",
   "scripts": {
-    "pretest": "npm run clean && npm run --silent lint && npm run build",
+    "pretest": "npm run clean && npm run build && npm run --silent lint",
     "coverage": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text mocha test/*.js",
     "coveralls": "npm run coverage && cat ./coverage/lcov.info | node node_modules/.bin/coveralls",
     "tests-only": "mocha",

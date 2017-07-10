@@ -1,4 +1,7 @@
 # selectem
+
+[![Build Status](https://travis-ci.org/sibnerian/selectem.svg?branch=master)](https://travis-ci.org/sibnerian/selectem) [![Coverage Status](https://coveralls.io/repos/github/sibnerian/selectem/badge.svg?branch=master)](https://coveralls.io/github/sibnerian/selectem?branch=master) [![npm version](https://badge.fury.io/js/selectem.svg?branch=master)](https://badge.fury.io/js/selectem)
+
 Shorthand for react-redux’s mapStateToProps. Need some props? Just select 'em!
 
 ## Before
