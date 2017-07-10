@@ -1,5 +1,5 @@
 # selectem
-Shorthand for react-redux’s `mapStateToProps`. Save yourself some keystrokes.
+Shorthand for react-redux’s mapStateToProps. Need some props? Just select 'em!
 
 ## Before
 ```jsx
@@ -35,13 +35,13 @@ const mapStateToProps = selectem({
 Normally `react-redux` checks the number of arguments of `mapStateToProps` to determine whether or not to pass in an `ownProps` parameter [[1]](https://github.com/reactjs/react-redux/blob/master/docs/api.md#the-arity-of-mapstatetoprops-and-mapdispatchtoprops-determines-whether-they-receive-ownprops). We’ll do the [same arity check as `react-redux`](https://github.com/reactjs/react-redux/blob/master/src/connect/wrapMapToProps.js#L20) and pass `ownProps` to each selector that needs it. :+1:
 
 ### I want to give one of my props a custom name! Can it be done?
-Yes, if you give a prop a custom name it will just get passed through automatically! Only props that end in "Selector" will be renamed.
+Yes, only props that end in "Selector" will be renamed! If you give a prop a custom name it will just get passed through automatically.
 
 ### I have a complicated `mapStateToProps` function but I still hate typing.
 It happens - particularly if you need per-instance memoization. `selectem` is pretty simple, so you can mix it in with standard `mapStateToProps` syntax without too much trouble:
 
 ```jsx
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = () => {
   // some complicated memoization stuff
   return (state, ownProps) => ({
     someProp: myPerInstanceMemoizedSelector(state, ownProps),
@@ -54,7 +54,8 @@ const mapStateToProps = (state, ownProps) => {
 };
 ```
 
-This basically boils down to calling the `selectem` function using `(state, ownProps)` as arguments. I'm not sure if this is actually nicer than just typing it out, but works!
+This basically boils down to calling the `selectem` function using `(state, ownProps)` as arguments.
+I'm not sure if this is actually nicer than just typing it out, but it works!
 
 ## License
 

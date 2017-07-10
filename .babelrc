@@ -1,0 +1,8 @@
+{
+  "presets": ["airbnb"],
+  "env": {
+    "test": {
+      "plugins": ["istanbul"]
+    }
+  }
+}
